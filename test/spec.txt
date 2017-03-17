@@ -8435,7 +8435,7 @@ Spaces are not allowed in autolinks:
 ```````````````````````````````` example
 <http://foo.bar/baz bim>
 .
-<p>&lt;http://foo.bar/baz bim&gt;</p>
+<p>&lt;<a href="http://foo.bar/baz">http://foo.bar/baz</a> bim&gt;</p>
 ````````````````````````````````
 
 
@@ -8498,7 +8498,7 @@ These are not autolinks:
 ```````````````````````````````` example
 < http://foo.bar >
 .
-<p>&lt; http://foo.bar &gt;</p>
+<p>&lt; <a href="http://foo.bar">http://foo.bar</a> &gt;</p>
 ````````````````````````````````
 
 
@@ -8519,7 +8519,7 @@ These are not autolinks:
 ```````````````````````````````` example
 http://example.com
 .
-<p>http://example.com</p>
+<p><a href="http://example.com">http://example.com</a></p>
 ````````````````````````````````
 
 

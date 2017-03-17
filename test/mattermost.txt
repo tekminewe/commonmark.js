@@ -1,0 +1,480 @@
+# Mattermost-specific behaviour not defined by the CommonMark spec
+
+## URLs starting with a valid protocol (`http:`, `ftp:`, etc) or `www.` are autolinked:
+
+```````````````````````````````` example
+http://example.com
+.
+<p><a href="http://example.com">http://example.com</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+https://example.com
+.
+<p><a href="https://example.com">https://example.com</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+ftp://example.com
+.
+<p><a href="ftp://example.com">ftp://example.com</a></p>
+````````````````````````````````
+````````````````````````````````
+
+```````````````````````````````` example
+www.example.com
+.
+<p><a href="http://www.example.com">www.example.com</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+www.example.com/index
+.
+<p><a href="http://www.example.com/index">www.example.com/index</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+www.example.com/index.html
+.
+<p><a href="http://www.example.com/index.html">www.example.com/index.html</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+http://example.com/index/sub
+.
+<p><a href="http://example.com/index/sub">http://example.com/index/sub</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+www1.example.com
+.
+<p><a href="http://www1.example.com">www1.example.com</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+https://en.wikipedia.org/wiki/URLs#Syntax
+.
+<p><a href="https://en.wikipedia.org/wiki/URLs#Syntax">https://en.wikipedia.org/wiki/URLs#Syntax</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+https://groups.google.com/forum/#!msg
+.
+<p><a href="https://groups.google.com/forum/#!msg">https://groups.google.com/forum/#!msg</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+www.example.com/index?params=1
+.
+<p><a href="http://www.example.com/index?params=1">www.example.com/index?params=1</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+www.example.com/index?params=1&other=2
+.
+<p><a href="http://www.example.com/index?params=1&amp;other=2">www.example.com/index?params=1&other=2</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+www.example.com/index?params=1;other=2
+.
+<p><a href="http://www.example.com/index?params=1;other=2">www.example.com/index?params=1;other=2</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+http://www.example.com/_/page
+.
+<p><a href="http://www.example.com/_/page">http://www.example.com/_/page</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+https://en.wikipedia.org/wiki/🐬
+.
+<p><a href="https://en.wikipedia.org/wiki/%F0%9F%90%AC">https://en.wikipedia.org/wiki/🐬</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+http://✪df.ws/1234
+.
+<p><a href="http://%E2%9C%AAdf.ws/1234">http://✪df.ws/1234</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+https://groups.google.com/forum/#!msg
+.
+<p><a href="https://groups.google.com/forum/#!msg">https://groups.google.com/forum/#!msg</a></p>
+````````````````````````````````
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## IP addresses starting with a valid protocol (`http:`, `ftp:`, etc) are autolinked:
+
+```````````````````````````````` example
+http://127.0.0.1
+.
+<p><a href="http://127.0.0.1">http://127.0.0.1</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+http://192.168.1.1:4040
+.
+<p><a href="http://192.168.1.1:4040">http://192.168.1.1:4040</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+http://[::1]:80
+.
+<p><a href="http://%5B::1%5D:80">http://[::1]:80</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+https://[::1]:80
+.
+<p><a href="https://%5B::1%5D:80">https://[::1]:80</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+http://[2001:0:5ef5:79fb:303a:62d5:3312:ff42]:8065
+.
+<p><a href="http://%5B2001:0:5ef5:79fb:303a:62d5:3312:ff42%5D:8065">http://[2001:0:5ef5:79fb:303a:62d5:3312:ff42]:8065</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+https://[2001:0:5ef5:79fb:303a:62d5:3312:ff42]:443
+.
+<p><a href="https://%5B2001:0:5ef5:79fb:303a:62d5:3312:ff42%5D:443">https://[2001:0:5ef5:79fb:303a:62d5:3312:ff42]:443</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+http://username:password@127.0.0.1
+.
+<p><a href="http://username:password@127.0.0.1">http://username:password@127.0.0.1</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+http://username:password@[2001:0:5ef5:79fb:303a:62d5:3312:ff42]:80
+.
+<p><a href="http://username:password@%5B2001:0:5ef5:79fb:303a:62d5:3312:ff42%5D:80">http://username:password@[2001:0:5ef5:79fb:303a:62d5:3312:ff42]:80</a></p>
+````````````````````````````````
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## URLs inside of brackets are autolinked correctly
+
+```````````````````````````````` example
+https://en.wikipedia.org/wiki/Rendering_(computer_graphics)
+.
+<p><a href="https://en.wikipedia.org/wiki/Rendering_(computer_graphics)">https://en.wikipedia.org/wiki/Rendering_(computer_graphics)</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+http://example.com/more_(than)_one_(parens)
+.
+<p><a href="http://example.com/more_(than)_one_(parens)">http://example.com/more_(than)_one_(parens)</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+http://example.com/(something)?after=parens
+.
+<p><a href="http://example.com/(something)?after=parens">http://example.com/(something)?after=parens</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+http://foo.com/unicode_(✪)_in_parens
+.
+<p><a href="http://foo.com/unicode_(%E2%9C%AA)_in_parens">http://foo.com/unicode_(✪)_in_parens</a></p>
+````````````````````````````````
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Formatted URLs
+
+```````````````````````````````` example
+*https://example.com*
+.
+<p><em><a href="https://example.com">https://example.com</a></em></p>
+````````````````````````````````
+
+```````````````````````````````` example
+_https://example.com_
+.
+<p><em><a href="https://example.com">https://example.com</a></em></p>
+````````````````````````````````
+
+```````````````````````````````` example
+**https://example.com**
+.
+<p><strong><a href="https://example.com">https://example.com</a></strong></p>
+````````````````````````````````
+
+```````````````````````````````` example
+__https://example.com__
+.
+<p><strong><a href="https://example.com">https://example.com</a></strong></p>
+````````````````````````````````
+
+```````````````````````````````` example
+***https://example.com***
+.
+<p><em><strong><a href="https://example.com">https://example.com</a></strong></em></p>
+````````````````````````````````
+
+```````````````````````````````` example
+___https://example.com___
+.
+<p><em><strong><a href="https://example.com">https://example.com</a></strong></em></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a link *https://example.com* in a sentence
+.
+<p>This is a link <em><a href="https://example.com">https://example.com</a></em> in a sentence</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a link _https://example.com_ in a sentence
+.
+<p>This is a link <em><a href="https://example.com">https://example.com</a></em> in a sentence</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a link **https://example.com** in a sentence
+.
+<p>This is a link <strong><a href="https://example.com">https://example.com</a></strong> in a sentence</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a link __https://example.com__ in a sentence
+.
+<p>This is a link <strong><a href="https://example.com">https://example.com</a></strong> in a sentence</p>
+````````````````````````````````
+
+```````````````````````````````` example
+*https://example.com* in a sentence
+.
+<p><em><a href="https://example.com">https://example.com</a></em> in a sentence</p>
+````````````````````````````````
+
+```````````````````````````````` example
+_https://example.com_ in a sentence
+.
+<p><em><a href="https://example.com">https://example.com</a></em> in a sentence</p>
+````````````````````````````````
+
+```````````````````````````````` example
+**https://example.com** in a sentence
+.
+<p><strong><a href="https://example.com">https://example.com</a></strong> in a sentence</p>
+````````````````````````````````
+
+```````````````````````````````` example
+__https://example.com__ in a sentence
+.
+<p><strong><a href="https://example.com">https://example.com</a></strong> in a sentence</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a link *https://example.com*
+.
+<p>This is a link <em><a href="https://example.com">https://example.com</a></em></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a link _https://example.com_
+.
+<p>This is a link <em><a href="https://example.com">https://example.com</a></em></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a link **https://example.com**
+.
+<p>This is a link <strong><a href="https://example.com">https://example.com</a></strong></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a link __https://example.com__
+.
+<p>This is a link <strong><a href="https://example.com">https://example.com</a></strong></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a *link https://example.com* in a sentence
+.
+<p>This is a <em>link <a href="https://example.com">https://example.com</a></em> in a sentence</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a _link https://example.com_ in a sentence
+.
+<p>This is a <em>link <a href="https://example.com">https://example.com</a></em> in a sentence</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a **link https://example.com** in a sentence
+.
+<p>This is a <strong>link <a href="https://example.com">https://example.com</a></strong> in a sentence</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a __link https://example.com__ in a sentence
+.
+<p>This is a <strong>link <a href="https://example.com">https://example.com</a></strong> in a sentence</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a link *https://example.com in a* sentence
+.
+<p>This is a link <em><a href="https://example.com">https://example.com</a> in a</em> sentence</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a link _https://example.com in a_ sentence
+.
+<p>This is a link <em><a href="https://example.com">https://example.com</a> in a</em> sentence</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a link **https://example.com in a** sentence
+.
+<p>This is a link <strong><a href="https://example.com">https://example.com</a> in a</strong> sentence</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a link __https://example.com in a__ sentence
+.
+<p>This is a link <strong><a href="https://example.com">https://example.com</a> in a</strong> sentence</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a *link https://example.com in a* sentence
+.
+<p>This is a <em>link <a href="https://example.com">https://example.com</a> in a</em> sentence</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a _link https://example.com in a_ sentence
+.
+<p>This is a <em>link <a href="https://example.com">https://example.com</a> in a</em> sentence</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a **link https://example.com in a** sentence
+.
+<p>This is a <strong>link <a href="https://example.com">https://example.com</a> in a</strong> sentence</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a __link https://example.com in a__ sentence
+.
+<p>This is a <strong>link <a href="https://example.com">https://example.com</a> in a</strong> sentence</p>
+````````````````````````````````
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Don't autolink inside another link
+
+```````````````````````````````` example
+[www.example.com](https://example.com)
+.
+<p><a href="https://example.com">www.example.com</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+[http://www.example.com](https://example.com)
+.
+<p><a href="https://example.com">http://www.example.com</a></p>
+````````````````````````````````
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Links in sentences
+
+```````````````````````````````` example
+(http://example.com)
+.
+<p>(<a href="http://example.com">http://example.com</a>)</p>
+````````````````````````````````
+
+```````````````````````````````` example
+(see http://example.com)
+.
+<p>(see <a href="http://example.com">http://example.com</a>)</p>
+````````````````````````````````
+
+```````````````````````````````` example
+(http://example.com watch this)
+.
+<p>(<a href="http://example.com">http://example.com</a> watch this)</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a sentence with a http://example.com in it.
+.
+<p>This is a sentence with a <a href="http://example.com">http://example.com</a> in it.</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a sentence with a [link](http://example.com) in it.
+.
+<p>This is a sentence with a <a href="http://example.com">link</a> in it.</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a sentence with a http://example.com/_/underscore in it.
+.
+<p>This is a sentence with a <a href="http://example.com/_/underscore">http://example.com/_/underscore</a> in it.</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a sentence with a link (http://example.com) in it.
+.
+<p>This is a sentence with a link (<a href="http://example.com">http://example.com</a>) in it.</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a sentence with a (https://en.wikipedia.org/wiki/Rendering_(computer_graphics)) in it.
+.
+<p>This is a sentence with a (<a href="https://en.wikipedia.org/wiki/Rendering_(computer_graphics)">https://en.wikipedia.org/wiki/Rendering_(computer_graphics)</a>) in it.</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a sentence with a http://192.168.1.1:4040 in it.
+.
+<p>This is a sentence with a <a href="http://192.168.1.1:4040">http://192.168.1.1:4040</a> in it.</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a sentence with a https://[::1]:80 in it.
+.
+<p>This is a sentence with a <a href="https://%5B::1%5D:80">https://[::1]:80</a> in it.</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a link to http://example.com.
+.
+<p>This is a link to <a href="http://example.com">http://example.com</a>.</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a link to http://example.com*
+.
+<p>This is a link to <a href="http://example.com">http://example.com</a>*</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a link to http://example.com_
+.
+<p>This is a link to <a href="http://example.com">http://example.com</a>_</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a link containing http://example.com/something?with,commas,in,url, but not at the end
+.
+<p>This is a link containing <a href="http://example.com/something?with,commas,in,url">http://example.com/something?with,commas,in,url</a>, but not at the end</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a question about a link http://example.com?
+.
+<p>This is a question about a link <a href="http://example.com">http://example.com</a>?</p>
+````````````````````````````````
