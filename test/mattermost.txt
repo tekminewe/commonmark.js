@@ -1,6 +1,10 @@
 # Mattermost-specific behaviour not defined by the CommonMark spec
 
-## URLs starting with a valid protocol (`http:`, `ftp:`, etc) or `www.` are autolinked:
+=========================================================================================================================================================================
+## URL Autolinking
+=========================================================================================================================================================================
+
+### URLs starting with a valid protocol (`http:`, `ftp:`, etc) or `www.` are autolinked:
 
 ```````````````````````````````` example
 http://example.com
@@ -107,7 +111,7 @@ https://groups.google.com/forum/#!msg
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## IP addresses starting with a valid protocol (`http:`, `ftp:`, etc) are autolinked:
+### IP addresses starting with a valid protocol (`http:`, `ftp:`, etc) are autolinked:
 
 ```````````````````````````````` example
 http://127.0.0.1
@@ -159,7 +163,7 @@ http://username:password@[2001:0:5ef5:79fb:303a:62d5:3312:ff42]:80
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## URLs inside of brackets are autolinked correctly
+### URLs inside of brackets are autolinked correctly
 
 ```````````````````````````````` example
 https://en.wikipedia.org/wiki/Rendering_(computer_graphics)
@@ -187,7 +191,7 @@ http://foo.com/unicode_(✪)_in_parens
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## Formatted URLs
+### Formatted URLs
 
 ```````````````````````````````` example
 *https://example.com*
@@ -371,7 +375,7 @@ This is a __link https://example.com in a__ sentence
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## Don't autolink inside another link
+### Don't autolink inside another link
 
 ```````````````````````````````` example
 [www.example.com](https://example.com)
@@ -387,7 +391,7 @@ This is a __link https://example.com in a__ sentence
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## Links in sentences
+### Links in sentences
 
 ```````````````````````````````` example
 (http://example.com)
@@ -477,4 +481,68 @@ This is a link containing http://example.com/something?with,commas,in,url, but n
 This is a question about a link http://example.com?
 .
 <p>This is a question about a link <a href="http://example.com">http://example.com</a>?</p>
+````````````````````````````````
+
+=========================================================================================================================================================================
+## At Mentions
+=========================================================================================================================================================================
+
+### Valid at mentions
+
+```````````````````````````````` example
+This is an @mention
+.
+<p>This is an <span data-mention-name="mention">@mention</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an @mention123
+.
+<p>This is an <span data-mention-name="mention123">@mention123</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an @mention.
+.
+<p>This is an <span data-mention-name="mention.">@mention.</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an @me-ntion
+.
+<p>This is an <span data-mention-name="me-ntion">@me-ntion</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an @men_tion
+.
+<p>This is an <span data-mention-name="men_tion">@men_tion</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an @mention/@alternate
+.
+<p>This is an <span data-mention-name="mention">@mention</span>/<span data-mention-name="alternate">@alternate</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an optional mention (@mention)
+.
+<p>This is an optional mention (<span data-mention-name="mention">@mention</span>)</p>
+````````````````````````````````
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### Invalid at mentions
+
+```````````````````````````````` example
+This is an email@address.com
+.
+<p>This is an email@address.com</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an user@host
+.
+<p>This is an user@host</p>
 ````````````````````````````````

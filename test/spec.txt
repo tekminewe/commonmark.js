@@ -8482,7 +8482,7 @@ Backslash-escapes do not work inside email autolinks:
 ```````````````````````````````` example
 <foo\+@bar.example.com>
 .
-<p>&lt;foo+@bar.example.com&gt;</p>
+<p>&lt;foo+<span data-mention-name="bar.example.com">@bar.example.com</span>&gt;</p>
 ````````````````````````````````
 
 
