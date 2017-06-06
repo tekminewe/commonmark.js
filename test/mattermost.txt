@@ -531,6 +531,18 @@ This is an optional mention (@mention)
 <p>This is an optional mention (<span data-mention-name="mention">@mention</span>)</p>
 ````````````````````````````````
 
+```````````````````````````````` example
+This is an @Mention
+.
+<p>This is an <span data-mention-name="Mention">@Mention</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an @MENTION
+.
+<p>This is an <span data-mention-name="MENTION">@MENTION</span></p>
+````````````````````````````````
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### Invalid at mentions
