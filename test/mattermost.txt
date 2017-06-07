@@ -558,3 +558,107 @@ This is an user@host
 .
 <p>This is an user@host</p>
 ````````````````````````````````
+
+=========================================================================================================================================================================
+## Emojis
+=========================================================================================================================================================================
+
+### Valid emojis
+
+```````````````````````````````` example
+This is an :emoji:
+.
+<p>This is an <span data-emoji-name="emoji">:emoji:</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :emo_ji:
+.
+<p>This is an <span data-emoji-name="emo_ji">:emo_ji:</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :emo-ji:
+.
+<p>This is an <span data-emoji-name="emo-ji">:emo-ji:</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :emoji123:
+.
+<p>This is an <span data-emoji-name="emoji123">:emoji123:</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :emoji:.
+.
+<p>This is an <span data-emoji-name="emoji">:emoji:</span>.</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an (:emoji:)
+.
+<p>This is an (<span data-emoji-name="emoji">:emoji:</span>)</p>
+````````````````````````````````
+
+```````````````````````````````` example
+These are some :emoji1::emoji2:
+.
+<p>These are some <span data-emoji-name="emoji1">:emoji1:</span><span data-emoji-name="emoji2">:emoji2:</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+These are some :emoji1:/:emoji2:
+.
+<p>These are some <span data-emoji-name="emoji1">:emoji1:</span>/<span data-emoji-name="emoji2">:emoji2:</span></p>
+````````````````````````````````
+
+### Invalid emojis
+
+```````````````````````````````` example
+This is not an :emoji
+.
+<p>This is not an :emoji</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is not an emoji:
+.
+<p>This is not an emoji:</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is not an :emo ji:
+.
+<p>This is not an :emo ji:</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is not an :emo'ji:
+.
+<p>This is not an :emo'ji:</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is not an :emo+ji:
+.
+<p>This is not an :emo+ji:</p>
+````````````````````````````````
+
+```````````````````````````````` example
+Thisisnotan:emoji:
+.
+<p><a href="Thisisnotan:emoji">Thisisnotan:emoji</a>:</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is not an :emoji:isit
+.
+<p>This is not an :<a href="emoji:isit">emoji:isit</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is not an:emoji:isit
+.
+<p>This is not <a href="an:emoji:isit">an:emoji:isit</a></p>
+````````````````````````````````
