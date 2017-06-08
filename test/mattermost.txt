@@ -76,7 +76,7 @@ www.example.com/index?params=1
 ```````````````````````````````` example
 www.example.com/index?params=1&other=2
 .
-<p><a href="http://www.example.com/index?params=1&amp;other=2">www.example.com/index?params=1&other=2</a></p>
+<p><a href="http://www.example.com/index?params=1&amp;other=2">www.example.com/index?params=1&amp;other=2</a></p>
 ````````````````````````````````
 
 ```````````````````````````````` example
