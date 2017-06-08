@@ -640,12 +640,6 @@ This is not an :emo'ji:
 ````````````````````````````````
 
 ```````````````````````````````` example
-This is not an :emo+ji:
-.
-<p>This is not an :emo+ji:</p>
-````````````````````````````````
-
-```````````````````````````````` example
 Thisisnotan:emoji:
 .
 <p><a href="Thisisnotan:emoji">Thisisnotan:emoji</a>:</p>
@@ -661,4 +655,307 @@ This is not an :emoji:isit
 This is not an:emoji:isit
 .
 <p>This is not <a href="an:emoji:isit">an:emoji:isit</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :+1:
+.
+<p>This is an <span data-emoji-name="+1" data-literal=":+1:">:+1:</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :-1:
+.
+<p>This is an <span data-emoji-name="-1" data-literal=":-1:">:-1:</span></p>
+````````````````````````````````
+
+=========================================================================================================================================================================
+## Emoticons
+=========================================================================================================================================================================
+
+### Valid emoticons
+
+```````````````````````````````` example
+This is an :)
+.
+<p>This is an <span data-emoji-name="slightly_smiling_face" data-literal=":)">:)</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :-)
+.
+<p>This is an <span data-emoji-name="slightly_smiling_face" data-literal=":-)">:-)</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an ;)
+.
+<p>This is an <span data-emoji-name="wink" data-literal=";)">;)</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an ;-)
+.
+<p>This is an <span data-emoji-name="wink" data-literal=";-)">;-)</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :o
+.
+<p>This is an <span data-emoji-name="open_mouth" data-literal=":o">:o</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :O
+.
+<p>This is an <span data-emoji-name="open_mouth" data-literal=":O">:O</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :-o
+.
+<p>This is an <span data-emoji-name="scream" data-literal=":-o">:-o</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :-O
+.
+<p>This is an <span data-emoji-name="scream" data-literal=":-O">:-O</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :]
+.
+<p>This is an <span data-emoji-name="smirk" data-literal=":]">:]</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :-]
+.
+<p>This is an <span data-emoji-name="smirk" data-literal=":-]">:-]</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :d
+.
+<p>This is an <span data-emoji-name="smile" data-literal=":d">:d</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :-d
+.
+<p>This is an <span data-emoji-name="smile" data-literal=":-d">:-d</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :D
+.
+<p>This is an <span data-emoji-name="smile" data-literal=":D">:D</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :-D
+.
+<p>This is an <span data-emoji-name="smile" data-literal=":-D">:-D</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an x-d
+.
+<p>This is an <span data-emoji-name="stuck_out_tongue_closed_eyes" data-literal="x-d">x-d</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an X-d
+.
+<p>This is an <span data-emoji-name="stuck_out_tongue_closed_eyes" data-literal="X-d">X-d</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an x-D
+.
+<p>This is an <span data-emoji-name="stuck_out_tongue_closed_eyes" data-literal="x-D">x-D</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an X-D
+.
+<p>This is an <span data-emoji-name="stuck_out_tongue_closed_eyes" data-literal="X-D">X-D</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :p
+.
+<p>This is an <span data-emoji-name="stuck_out_tongue" data-literal=":p">:p</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :-p
+.
+<p>This is an <span data-emoji-name="stuck_out_tongue" data-literal=":-p">:-p</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :P
+.
+<p>This is an <span data-emoji-name="stuck_out_tongue" data-literal=":P">:P</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :-P
+.
+<p>This is an <span data-emoji-name="stuck_out_tongue" data-literal=":-P">:-P</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :[
+.
+<p>This is an <span data-emoji-name="rage" data-literal=":[">:[</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :-[
+.
+<p>This is an <span data-emoji-name="rage" data-literal=":-[">:-[</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :@
+.
+<p>This is an <span data-emoji-name="rage" data-literal=":@">:@</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :-@
+.
+<p>This is an <span data-emoji-name="rage" data-literal=":-@">:-@</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :(
+.
+<p>This is an <span data-emoji-name="slightly_frowning_face" data-literal=":(">:(</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :-(
+.
+<p>This is an <span data-emoji-name="slightly_frowning_face" data-literal=":-(">:-(</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :'(
+.
+<p>This is an <span data-emoji-name="cry" data-literal=":'(">:'(</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :'-(
+.
+<p>This is an <span data-emoji-name="cry" data-literal=":'-(">:'-(</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :’(
+.
+<p>This is an <span data-emoji-name="cry" data-literal=":’(">:’(</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :’-(
+.
+<p>This is an <span data-emoji-name="cry" data-literal=":’-(">:’-(</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :/
+.
+<p>This is an <span data-emoji-name="confused" data-literal=":/">:/</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :-/
+.
+<p>This is an <span data-emoji-name="confused" data-literal=":-/">:-/</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :s
+.
+<p>This is an <span data-emoji-name="confounded" data-literal=":s">:s</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :-s
+.
+<p>This is an <span data-emoji-name="confounded" data-literal=":-s">:-s</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :|
+.
+<p>This is an <span data-emoji-name="neutral_face" data-literal=":|">:|</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :-|
+.
+<p>This is an <span data-emoji-name="neutral_face" data-literal=":-|">:-|</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :$
+.
+<p>This is an <span data-emoji-name="flushed" data-literal=":$">:$</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :-$
+.
+<p>This is an <span data-emoji-name="flushed" data-literal=":-$">:-$</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :-x
+.
+<p>This is an <span data-emoji-name="mask" data-literal=":-x">:-x</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an :-X
+.
+<p>This is an <span data-emoji-name="mask" data-literal=":-X">:-X</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an <3
+.
+<p>This is an <span data-emoji-name="heart" data-literal="&lt;3">&lt;3</span></p>
+````````````````````````````````
+
+
+```````````````````````````````` example
+This is an </3
+.
+<p>This is an <span data-emoji-name="broken_heart" data-literal="&lt;/3">&lt;/3</span></p>
+````````````````````````````````
+
+### Invalid emoticons
+
+```````````````````````````````` example
+This is not an :(.
+.
+<p>This is not an :(.</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is not an :(/:D
+.
+<p>This is not an :(/:D</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is not an (:()
+.
+<p>This is not an (:()</p>
 ````````````````````````````````
