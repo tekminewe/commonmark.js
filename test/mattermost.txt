@@ -508,6 +508,12 @@ This is an @mention.
 ````````````````````````````````
 
 ```````````````````````````````` example
+This is an @me.ntion
+.
+<p>This is an <span data-mention-name="me.ntion">@me.ntion</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
 This is an @me-ntion
 .
 <p>This is an <span data-mention-name="me-ntion">@me-ntion</span></p>
@@ -958,4 +964,76 @@ This is not an :(/:D
 This is not an (:()
 .
 <p>This is not an (:()</p>
+````````````````````````````````
+
+=========================================================================================================================================================================
+## Channel links
+=========================================================================================================================================================================
+
+### Valid channel links
+
+```````````````````````````````` example
+This is a ~channel
+.
+<p>This is a <span data-channel-name="channel">~channel</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a ~channel123
+.
+<p>This is a <span data-channel-name="channel123">~channel123</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a ~123channel
+.
+<p>This is a <span data-channel-name="123channel">~123channel</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a ~channel123.
+.
+<p>This is a <span data-channel-name="channel123">~channel123</span>.</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a ~chan-nel
+.
+<p>This is a <span data-channel-name="chan-nel">~chan-nel</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a ~chan_nel
+.
+<p>This is a <span data-channel-name="chan_nel">~chan_nel</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a ~channel/~alternate
+.
+<p>This is a <span data-channel-name="channel">~channel</span>/<span data-channel-name="alternate">~alternate</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is an optional (~channel)
+.
+<p>This is an optional (<span data-channel-name="channel">~channel</span>)</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a ~Channel
+.
+<p>This is a <span data-channel-name="Channel">~Channel</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a ~CHANNEL
+.
+<p>This is a <span data-channel-name="CHANNEL">~CHANNEL</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+Channel names can't contain periods ~chan.nel
+.
+<p>Channel names can't contain periods <span data-channel-name="chan">~chan</span>.nel</p>
 ````````````````````````````````
