@@ -483,6 +483,46 @@ This is a question about a link http://example.com?
 <p>This is a question about a link <a href="http://example.com">http://example.com</a>?</p>
 ````````````````````````````````
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### PLT-7250 Links with trailing periods
+
+```````````````````````````````` example
+http://example.com.
+.
+<p><a href="http://example.com">http://example.com</a>.</p>
+````````````````````````````````
+
+```````````````````````````````` example
+http://example.com...
+.
+<p><a href="http://example.com">http://example.com</a>...</p>
+````````````````````````````````
+
+```````````````````````````````` example
+http://example.com/foo.
+.
+<p><a href="http://example.com/foo">http://example.com/foo</a>.</p>
+````````````````````````````````
+
+```````````````````````````````` example
+http://example.com/foo...
+.
+<p><a href="http://example.com/foo">http://example.com/foo</a>...</p>
+````````````````````````````````
+
+```````````````````````````````` example
+http://example.com/foo.bar
+.
+<p><a href="http://example.com/foo.bar">http://example.com/foo.bar</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+http://example.com/foo...bar
+.
+<p><a href="http://example.com/foo...bar">http://example.com/foo...bar</a></p>
+````````````````````````````````
+
 =========================================================================================================================================================================
 ## At Mentions
 =========================================================================================================================================================================
