@@ -71,3 +71,26 @@ a***b* c*
 <p>a*<em><em>b</em> c</em></p>
 ````````````````````````````````
 
+Issue jgm/CommonMark#468 - backslash at end of link definition
+
+
+```````````````````````````````` example
+[\]: test
+.
+<p>[]: test</p>
+````````````````````````````````
+
+Issue jgm/commonmark.js#121 - punctuation set different
+
+```````````````````````````````` example
+^_test_
+.
+<p>^<em>test</em></p>
+````````````````````````````````
+
+Issue #116 - tabs before and after ATX closing heading
+```````````````````````````````` example
+# foo→#→
+.
+<h1>foo</h1>
+````````````````````````````````
