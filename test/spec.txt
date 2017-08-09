@@ -4381,29 +4381,42 @@ Four spaces indent gives a code block:
     lines are called
     [lazy continuation line](@)s.
 
-Here is an example with [lazy continuation lines]:
+// Here is an example with [lazy continuation lines]:
+//
+// ```````````````````````````````` example
+//   1.  A paragraph
+// with two lines.
+//
+//           indented code
+//
+//       > A block quote.
+// .
+// <ol>
+// <li>
+// <p>A paragraph
+// with two lines.</p>
+// <pre><code>indented code
+// </code></pre>
+// <blockquote>
+// <p>A block quote.</p>
+// </blockquote>
+// </li>
+// </ol>
+// ````````````````````````````````
+
+@hmhealey - We've changed laziness to not apply in lists when
+the following line has no indentation since users kept reporting
+it as a bug:
 
 ```````````````````````````````` example
   1.  A paragraph
 with two lines.
-
-          indented code
-
-      > A block quote.
 .
 <ol>
-<li>
-<p>A paragraph
-with two lines.</p>
-<pre><code>indented code
-</code></pre>
-<blockquote>
-<p>A block quote.</p>
-</blockquote>
-</li>
+<li>A paragraph</li>
 </ol>
+<p>with two lines.</p>
 ````````````````````````````````
-
 
 Indentation can be partially deleted:
 
@@ -4417,6 +4430,17 @@ with two lines.</li>
 </ol>
 ````````````````````````````````
 
+@hmhealey - Or you can indent it to match the list:
+
+```````````````````````````````` example
+  1.  A paragraph
+      with two lines.
+.
+<ol>
+<li>A paragraph
+with two lines.</li>
+</ol>
+````````````````````````````````
 
 These examples show how laziness can work in nested structures:
 
