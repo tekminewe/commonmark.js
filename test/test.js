@@ -162,6 +162,10 @@ specTests('test/mattermost.txt', results, function(z) {
         return writer.render(reader.parse(z));
     });
 
+specTests('test/marked.txt', results, function(z) {
+        return writer.render(reader.parse(z));
+    });
+
 // pathological cases
 cursor.write('Pathological cases:\n');
 
