@@ -2518,6 +2518,32 @@ http://example.com/aaaaa.....
 <p><a href="http://example.com/aaaaa">http://example.com/aaaaa</a>.....</p>
 ````````````````````````````````
 
+### PLT-7250 urls_with_trailing_periods
+
+```````````````````````````````` example
+[Poe's law in action](https://en.wikipedia.org/wiki/Poe's_law)
+.
+<p><a href="https://en.wikipedia.org/wiki/Poe's_law">Poe's law in action</a></p>
+````````````````````````````````
+
+```````````````````````````````` example\
+[Poe's law in action](https://en.wikipedia.org/wiki/Poe's_law 'This is the title')
+.
+<p><a href="https://en.wikipedia.org/wiki/Poe&#39;s_law" title="This is the title">Poe&#39;s law in action</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+[Poe"s law in action](https://en.wikipedia.org/wiki/Poe"s_law)
+.
+<p><a href="https://en.wikipedia.org/wiki/Poe%22s_law">Poe&quot;s law in action</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+[Poe"s law in action](https://en.wikipedia.org/wiki/Poe"s_law "This is the title")
+.
+<p><a href="https://en.wikipedia.org/wiki/Poe%22s_law" title="This is the title">Poe&quot;s law in action</a></p>
+````````````````````````````````
+
 ### ref_paren
 
 ```````````````````````````````` example
