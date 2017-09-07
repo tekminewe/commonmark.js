@@ -2654,6 +2654,408 @@ And:
 </code></pre>
 ````````````````````````````````
 
+#### test-links
+
+```````````````````````````````` example
+http://example.com
+.
+<p><a href="http://example.com">http://example.com</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+https://example.com
+.
+<p><a href="https://example.com">https://example.com</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+www.example.com
+.
+<p><a href="http://www.example.com">www.example.com</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+www.example.com/index
+.
+<p><a href="http://www.example.com/index">www.example.com/index</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+www.example.com/index.html
+.
+<p><a href="http://www.example.com/index.html">www.example.com/index.html</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+www.example.com/index/sub
+.
+<p><a href="http://www.example.com/index/sub">www.example.com/index/sub</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+www.example.com/index?params=1
+.
+<p><a href="http://www.example.com/index?params=1">www.example.com/index?params=1</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+www.example.com/index?params=1&other=2
+.
+<p><a href="http://www.example.com/index?params=1&amp;other=2">www.example.com/index?params=1&amp;other=2</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+www.example.com/index?params=1;other=2
+.
+<p><a href="http://www.example.com/index?params=1;other=2">www.example.com/index?params=1;other=2</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+http://example.com:8065
+.
+<p><a href="http://example.com:8065">http://example.com:8065</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+http://www.example.com/_/page
+.
+<p><a href="http://www.example.com/_/page">http://www.example.com/_/page</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+www.example.com/_/page
+.
+<p><a href="http://www.example.com/_/page">www.example.com/_/page</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+https://en.wikipedia.org/wiki/🐬
+.
+<p><a href="https://en.wikipedia.org/wiki/%F0%9F%90%AC">https://en.wikipedia.org/wiki/🐬</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+https://en.wikipedia.org/wiki/Rendering_(computer_graphics)
+.
+<p><a href="https://en.wikipedia.org/wiki/Rendering_(computer_graphics)">https://en.wikipedia.org/wiki/Rendering_(computer_graphics)</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+http://127.0.0.1
+.
+<p><a href="http://127.0.0.1">http://127.0.0.1</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+http://192.168.1.1:4040
+.
+<p><a href="http://192.168.1.1:4040">http://192.168.1.1:4040</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+http://[::1]:80
+.
+<p><a href="http://%5B::1%5D:80">http://[::1]:80</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+http://[::1]:8065
+.
+<p><a href="http://%5B::1%5D:8065">http://[::1]:8065</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+https://[::1]:80
+.
+<p><a href="https://%5B::1%5D:80">https://[::1]:80</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+http://[2001:0:5ef5:79fb:303a:62d5:3312:ff42]
+.
+<p><a href="http://%5B2001:0:5ef5:79fb:303a:62d5:3312:ff42%5D">http://[2001:0:5ef5:79fb:303a:62d5:3312:ff42]</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+http://[2001:0:5ef5:79fb:303a:62d5:3312:ff42]:8065
+.
+<p><a href="http://%5B2001:0:5ef5:79fb:303a:62d5:3312:ff42%5D:8065">http://[2001:0:5ef5:79fb:303a:62d5:3312:ff42]:8065</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+https://[2001:0:5ef5:79fb:303a:62d5:3312:ff42]
+.
+<p><a href="https://%5B2001:0:5ef5:79fb:303a:62d5:3312:ff42%5D">https://[2001:0:5ef5:79fb:303a:62d5:3312:ff42]</a></p>
+````````````````````````````````
+
+@hmhealey - We don't support autolinking emails (yet)
+```````````````````````````````` example
+test@example.com
+.
+<p>test@example.com</p>
+````````````````````````````````
+
+```````````````````````````````` example
+http://example.com/more_(than)_one_(parens)
+.
+<p><a href="http://example.com/more_(than)_one_(parens)">http://example.com/more_(than)_one_(parens)</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+http://example.com/(something)?after=parens
+.
+<p><a href="http://example.com/(something)?after=parens">http://example.com/(something)?after=parens</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+http://foo.com/unicode_(✪)_in_parens
+.
+<p><a href="http://foo.com/unicode_(%E2%9C%AA)_in_parens">http://foo.com/unicode_(✪)_in_parens</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+http://✪df.ws/1234
+.
+<p><a href="http://%E2%9C%AAdf.ws/1234">http://✪df.ws/1234</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+*https://example.com*
+.
+<p><em><a href="https://example.com">https://example.com</a></em></p>
+````````````````````````````````
+
+```````````````````````````````` example
+_https://example.com_
+.
+<p><em><a href="https://example.com">https://example.com</a></em></p>
+````````````````````````````````
+
+```````````````````````````````` example
+**https://example.com**
+.
+<p><strong><a href="https://example.com">https://example.com</a></strong></p>
+````````````````````````````````
+
+```````````````````````````````` example
+__https://example.com__
+.
+<p><strong><a href="https://example.com">https://example.com</a></strong></p>
+````````````````````````````````
+
+```````````````````````````````` example
+***https://example.com***
+.
+<p><em><strong><a href="https://example.com">https://example.com</a></strong></em></p>
+````````````````````````````````
+
+```````````````````````````````` example
+___https://example.com___
+.
+<p><em><strong><a href="https://example.com">https://example.com</a></strong></em></p>
+````````````````````````````````
+
+```````````````````````````````` example
+<https://example.com>
+.
+<p><a href="https://example.com">https://example.com</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+<https://en.wikipedia.org/wiki/Rendering_(computer_graphics)>
+.
+<p><a href="https://en.wikipedia.org/wiki/Rendering_(computer_graphics)">https://en.wikipedia.org/wiki/Rendering_(computer_graphics)</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+www1.example.com
+.
+<p><a href="http://www1.example.com">www1.example.com</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+[This whole #sentence should be a link](https://example.com)
+.
+<p><a href="https://example.com">This whole #sentence should be a link</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+https://groups.google.com/forum/#!msg
+.
+<p><a href="https://groups.google.com/forum/#!msg">https://groups.google.com/forum/#!msg</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+www.
+.
+<p>www.</p>
+````````````````````````````````
+
+```````````````````````````````` example
+http:
+.
+<p>http:</p>
+````````````````````````````````
+
+@hmhealey - These probably shouldn't auto link, but it doesn't hurt that they do
+
+```````````````````````````````` example
+www.asdf
+.
+<p><a href="http://www.asdf">www.asdf</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+http://
+.
+<p><a href="http://">http://</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+example.com
+.
+<p>example.com</p>
+````````````````````````````````
+
+```````````````````````````````` example
+readme.md
+.
+<p>readme.md</p>
+````````````````````````````````
+
+```````````````````````````````` example
+@example.com
+.
+<p><span data-mention-name="example.com">@example.com</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+./make-compiled-client.sh
+.
+<p>./make-compiled-client.sh</p>
+````````````````````````````````
+
+```````````````````````````````` example
+test.:test
+.
+<p>test.:test</p>
+````````````````````````````````
+
+```````````````````````````````` example
+`https://example.com`
+.
+<p><code>https://example.com</code></p>
+````````````````````````````````
+
+```````````````````````````````` example
+(http://example.com)
+.
+<p>(<a href="http://example.com">http://example.com</a>)</p>
+````````````````````````````````
+
+```````````````````````````````` example
+(see http://example.com)
+.
+<p>(see <a href="http://example.com">http://example.com</a>)</p>
+````````````````````````````````
+
+```````````````````````````````` example
+(http://example.com watch this)
+.
+<p>(<a href="http://example.com">http://example.com</a> watch this)</p>
+````````````````````````````````
+
+@hmhealey - Again, emails aren't supported (yet)
+
+```````````````````````````````` example
+(test@example.com)
+.
+<p>(test@example.com)</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a sentence with a http://example.com in it.
+.
+<p>This is a sentence with a <a href="http://example.com">http://example.com</a> in it.</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a sentence with a [link](http://example.com) in it.
+.
+<p>This is a sentence with a <a href="http://example.com">link</a> in it.</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a sentence with a http://example.com/_/underscore in it.
+.
+<p>This is a sentence with a <a href="http://example.com/_/underscore">http://example.com/_/underscore</a> in it.</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a sentence with a link (http://example.com) in it.
+.
+<p>This is a sentence with a link (<a href="http://example.com">http://example.com</a>) in it.</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a sentence with a (https://en.wikipedia.org/wiki/Rendering_(computer_graphics)) in it.
+.
+<p>This is a sentence with a (<a href="https://en.wikipedia.org/wiki/Rendering_(computer_graphics)">https://en.wikipedia.org/wiki/Rendering_(computer_graphics)</a>) in it.</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a sentence with a http://192.168.1.1:4040 in it.
+.
+<p>This is a sentence with a <a href="http://192.168.1.1:4040">http://192.168.1.1:4040</a> in it.</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a sentence with a https://[::1]:80 in it.
+.
+<p>This is a sentence with a <a href="https://%5B::1%5D:80">https://[::1]:80</a> in it.</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a link to http://example.com.
+.
+<p>This is a link to <a href="http://example.com">http://example.com</a>.</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a link containing http://example.com/something?with,commas,in,url, but not at end
+.
+<p>This is a link containing <a href="http://example.com/something?with,commas,in,url">http://example.com/something?with,commas,in,url</a>, but not at end</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a question about a link http://example.com?
+.
+<p>This is a question about a link <a href="http://example.com">http://example.com</a>?</p>
+````````````````````````````````
+
+```````````````````````````````` example
+[link](example.com "catch phrase!")
+.
+<p><a href="example.com" title="catch phrase!">link</a></p>
+````````````````````````````````
+
+@hmhealey - Neither commonmark nor GitHub support the behaviour marked's
+behaviour on these two.
+
+```````````````````````````````` example
+[link](example.com "title with "quotes"")
+.
+<p>[link](example.com &quot;title with &quot;quotes&quot;&quot;)</p>
+````````````````````````````````
+
+@hmhealey - Seriously, who uses spaces in a URL
+
+```````````````````````````````` example
+[link with spaces](example.com/ spaces in the url "and a title")
+.
+<p>[link with spaces](example.com/ spaces in the url &quot;and a title&quot;)</p>
+````````````````````````````````
+
 #### test-markdown-lists
 
 ```````````````````````````````` example
