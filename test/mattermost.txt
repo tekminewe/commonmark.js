@@ -681,6 +681,12 @@ This is an :-1:
 <p>This is an <span data-emoji-name="-1" data-literal=":-1:">:-1:</span></p>
 ````````````````````````````````
 
+```````````````````````````````` example
+This is an :emoji: in a sentence.
+.
+<p>This is an <span data-emoji-name="emoji" data-literal=":emoji:">:emoji:</span> in a sentence.</p>
+````````````````````````````````
+
 -------------------------------------------------------------------------------------------------------------------------------------------
 
 ### Invalid emojis
