@@ -23,6 +23,11 @@ ftp://example.com
 .
 <p><a href="ftp://example.com">ftp://example.com</a></p>
 ````````````````````````````````
+
+```````````````````````````````` example
+ts3server://example.com?port=9001
+.
+<p><a href="ts3server://example.com?port=9001">ts3server://example.com?port=9001</a></p>
 ````````````````````````````````
 
 ```````````````````````````````` example
@@ -107,6 +112,12 @@ http://✪df.ws/1234
 https://groups.google.com/forum/#!msg
 .
 <p><a href="https://groups.google.com/forum/#!msg">https://groups.google.com/forum/#!msg</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+https://пример.срб/пример-26/
+.
+<p><a href="https://%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80.%D1%81%D1%80%D0%B1/%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80-26/">https://пример.срб/пример-26/</a></p>
 ````````````````````````````````
 
 -------------------------------------------------------------------------------------------------------------------------------------------
@@ -718,7 +729,7 @@ This is not an :emo'ji:
 ```````````````````````````````` example
 Thisisnotan:emoji:
 .
-<p><a href="Thisisnotan:emoji">Thisisnotan:emoji</a>:</p>
+<p>Thisisnotan:emoji:</p>
 ````````````````````````````````
 
 ```````````````````````````````` example
