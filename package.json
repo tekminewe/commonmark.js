@@ -16,9 +16,6 @@
   },
   "license": "BSD-2-Clause",
   "main": "./lib/index.js",
-  "bin": {
-    "commonmark": "./bin/commonmark"
-  },
   "scripts": {
     "test": "node ./test/test.js"
   },
