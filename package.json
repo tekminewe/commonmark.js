@@ -27,8 +27,8 @@
     "mdurl": "~ 1.0.1",
     "string.prototype.repeat": "^0.2.0",
     "minimist": "~ 1.2.0",
-    "xregexp": "slevithan/xregexp#3874365",
-    "foo": "hmhealey/xregexp#ca499e4"
+    "xregexp": "hmhealey/xregexp#33df4e4",
+    "foo": "slevithan/xregexp#3874365"
   },
   "directories": {
     "lib": "./lib"
