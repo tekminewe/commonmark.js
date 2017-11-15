@@ -27,7 +27,7 @@
     "mdurl": "~ 1.0.1",
     "string.prototype.repeat": "^0.2.0",
     "minimist": "~ 1.2.0",
-    "xregexp": "hmhealey/xregexp#013ba9a1d96a79ab138b7080b2a361b13ae7273b"
+    "xregexp": "hmhealey/xregexp#b5358d3b7e6276ff7f438ed4271ece3238b88016"
   },
   "directories": {
     "lib": "./lib"
