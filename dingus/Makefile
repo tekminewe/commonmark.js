@@ -34,5 +34,5 @@ commonmark.js: ../lib/index.js $(LIBFILES)
 	browserify --standalone commonmark $< -o $@
 
 dingus: all
-	echo "Starting dingus server at http://localhost:9001/"; \
-	http-server -p 9001 || python -m SimpleHTTPServer 9001
+	echo "Starting dingus server at http://localhost:9002/"; \
+	http-server -p 9001 || python -m SimpleHTTPServer 9002
