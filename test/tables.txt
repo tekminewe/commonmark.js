@@ -477,6 +477,56 @@ aaa|bbb
 </tr></tbody></table>
 ````````````````````````````````
 
+### Tables with escaped pipes
+
+```````````````````````````````` example
+|\|oo|a\|a|
+|---|---|
+|ba\||\|bb|
+|b\|z|cc\||
+.
+<table>
+<thead>
+<tr>
+<th>|oo</th>
+<th>a|a</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ba|</td>
+<td>|bb</td>
+</tr>
+<tr>
+<td>b|z</td>
+<td>cc|</td>
+</tr></tbody></table>
+````````````````````````````````
+
+```````````````````````````````` example
+\|oo|a\|a\|
+---|---
+ba\||\|bb\|
+b\|z|cc\|
+.
+<table>
+<thead>
+<tr>
+<th>|oo</th>
+<th>a|a|</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ba|</td>
+<td>|bb|</td>
+</tr>
+<tr>
+<td>b|z</td>
+<td>cc|</td>
+</tr></tbody></table>
+````````````````````````````````
+
 @hmhealey - The following section is copied from GitHub's tests for cmark available at
 https://github.com/github/cmark/blob/master/test/extensions.txt
 
