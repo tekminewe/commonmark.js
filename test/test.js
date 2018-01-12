@@ -62,7 +62,7 @@ var extractSpecTests = function(testfile) {
         .replace(/\r\n?/g, "\n") // Normalize newlines for platform independence
         .replace(/^<!-- END TESTS -->(.|[\n])*/m, '');
 
-tests.replace(/^`{32} example\n([\s\S]*?)^\.\n([\s\S]*?)^`{32}$|^#{1,6} *(.*)$/gm,
+tests.replace(/^`{32} example[^\n]*\n([\s\S]*?)^\.\n([\s\S]*?)^`{32}$|^#{1,6} *(.*)$/gm,
               function(_, markdownSubmatch, htmlSubmatch, sectionSubmatch){
                   if (sectionSubmatch) {
                       current_section = sectionSubmatch;
@@ -163,6 +163,10 @@ specTests('test/mattermost.txt', results, function(z) {
     });
 
 specTests('test/marked.txt', results, function(z) {
+        return writer.render(reader.parse(z));
+    });
+
+specTests('test/tables.txt', results, function(z) {
         return writer.render(reader.parse(z));
     });
 
