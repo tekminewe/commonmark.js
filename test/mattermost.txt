@@ -729,7 +729,7 @@ This is not an :emo'ji:
 ```````````````````````````````` example
 Thisisnotan:emoji:
 .
-<p>Thisisnotan:emoji:</p>
+<p><a href="Thisisnotan:emoji">Thisisnotan:emoji</a>:</p>
 ````````````````````````````````
 
 ```````````````````````````````` example
