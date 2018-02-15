@@ -477,6 +477,84 @@ aaa|bbb
 </tr></tbody></table>
 ````````````````````````````````
 
+```````````````````````````````` example
+   foo|aaa
+---|---
+.
+<table>
+<thead>
+<tr>
+<th>foo</th>
+<th>aaa</th>
+</tr>
+</thead></table>
+````````````````````````````````
+
+```````````````````````````````` example
+    foo|aaa
+---|---
+.
+<pre><code>foo|aaa
+</code></pre>
+<p>---|---</p>
+````````````````````````````````
+
+```````````````````````````````` example
+foo|aaa
+   ---|---
+.
+<table>
+<thead>
+<tr>
+<th>foo</th>
+<th>aaa</th>
+</tr>
+</thead></table>
+````````````````````````````````
+
+```````````````````````````````` example
+foo|aaa
+    ---|---
+.
+<p>foo|aaa
+---|---</p>
+````````````````````````````````
+
+```````````````````````````````` example
+foo|aaa
+---|---
+   123|45
+.
+<table>
+<thead>
+<tr>
+<th>foo</th>
+<th>aaa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>123</td>
+<td>45</td>
+</tr></tbody></table>
+````````````````````````````````
+
+```````````````````````````````` example
+foo|aaa
+---|---
+    123|45
+.
+<table>
+<thead>
+<tr>
+<th>foo</th>
+<th>aaa</th>
+</tr>
+</thead></table>
+<pre><code>123|45
+</code></pre>
+````````````````````````````````
+
 ### Tables with escaped pipes
 
 ```````````````````````````````` example
