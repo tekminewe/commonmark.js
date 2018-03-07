@@ -421,6 +421,7 @@ This is a __link https://example.com in a__ sentence
 .
 <p>(<a href="http://example.com">http://example.com</a> watch this)</p>
 ````````````````````````````````
+````````````````````````````````
 
 ```````````````````````````````` example
 This is a sentence with a http://example.com in it.
@@ -617,7 +618,7 @@ This is an @MENTION
 ```````````````````````````````` example
 This is an email@address.com
 .
-<p>This is an email@address.com</p>
+<p>This is an <a href="mailto:email@address.com">email@address.com</a></p>
 ````````````````````````````````
 
 ```````````````````````````````` example
@@ -1384,4 +1385,44 @@ This is ~~<3~~
 This is ~~:strawberry:~~
 .
 <p>This is <del><span data-emoji-name="strawberry" data-literal=":strawberry:">:strawberry:</span></del></p>
+````````````````````````````````
+
+===========================================================================================================================================
+## Email addresses
+===========================================================================================================================================
+
+```````````````````````````````` example
+email@example.com
+.
+<p><a href="mailto:email@example.com">email@example.com</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is my email@example.com.
+.
+<p>This is my <a href="mailto:email@example.com">email@example.com</a>.</p>
+````````````````````````````````
+
+```````````````````````````````` example
+(test@example.com)
+.
+<p>(<a href="mailto:test@example.com">test@example.com</a>)</p>
+````````````````````````````````
+
+```````````````````````````````` example
+email+address@example.com
+.
+<p><a href="mailto:email+address@example.com">email+address@example.com</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+email123@example.com
+.
+<p><a href="mailto:email123@example.com">email123@example.com</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+email@汤.中国
+.
+<p><a href="mailto:email@%E6%B1%A4.%E4%B8%AD%E5%9B%BD">email@汤.中国</a></p>
 ````````````````````````````````

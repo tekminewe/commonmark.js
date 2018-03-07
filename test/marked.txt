@@ -104,7 +104,7 @@ an email link containing a < in the address.
 ```````````````````````````````` example
 <noreply@example.com<mailto:noreply@example.com>>
 .
-<p>&lt;noreply@example.com<a href="mailto:noreply@example.com">mailto:noreply@example.com</a>&gt;</p>
+<p>&lt;<a href="mailto:noreply@example.com">noreply@example.com</a><a href="mailto:noreply@example.com">mailto:noreply@example.com</a>&gt;</p>
 ````````````````````````````````
 
 ### autolink_lines
@@ -2788,11 +2788,10 @@ https://[2001:0:5ef5:79fb:303a:62d5:3312:ff42]
 <p><a href="https://%5B2001:0:5ef5:79fb:303a:62d5:3312:ff42%5D">https://[2001:0:5ef5:79fb:303a:62d5:3312:ff42]</a></p>
 ````````````````````````````````
 
-@hmhealey - We don't support autolinking emails (yet)
 ```````````````````````````````` example
 test@example.com
 .
-<p>test@example.com</p>
+<p><a href="mailto:test@example.com">test@example.com</a></p>
 ````````````````````````````````
 
 ```````````````````````````````` example
@@ -2965,12 +2964,10 @@ test.:test
 <p>(<a href="http://example.com">http://example.com</a> watch this)</p>
 ````````````````````````````````
 
-@hmhealey - Again, emails aren't supported (yet)
-
 ```````````````````````````````` example
 (test@example.com)
 .
-<p>(test@example.com)</p>
+<p>(<a href="mailto:test@example.com">test@example.com</a>)</p>
 ````````````````````````````````
 
 ```````````````````````````````` example

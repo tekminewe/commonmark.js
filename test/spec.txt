@@ -8805,11 +8805,12 @@ http://example.com
 <p><a href="http://example.com">http://example.com</a></p>
 ````````````````````````````````
 
+@hmhealey - We support email autolinking:
 
 ```````````````````````````````` example
 foo@bar.example.com
 .
-<p>foo@bar.example.com</p>
+<p><a href="mailto:foo@bar.example.com">foo@bar.example.com</a></p>
 ````````````````````````````````
 
 
