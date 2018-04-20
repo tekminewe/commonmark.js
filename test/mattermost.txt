@@ -545,6 +545,84 @@ testwww.example.com
 <p>testwww.example.com</p>
 ````````````````````````````````
 
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+### MM-10180 Link containing period followed by non-letter
+
+```````````````````````````````` example
+https://example.com/123.+Pagetitle
+.
+<p><a href="https://example.com/123.+Pagetitle">https://example.com/123.+Pagetitle</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+https://example.com/123.?Pagetitle
+.
+<p><a href="https://example.com/123.?Pagetitle">https://example.com/123.?Pagetitle</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+https://example.com/123.-Pagetitle
+.
+<p><a href="https://example.com/123.-Pagetitle">https://example.com/123.-Pagetitle</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+https://example.com/123._Pagetitle
+.
+<p><a href="https://example.com/123._Pagetitle">https://example.com/123._Pagetitle</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+https://example.com/123.+
+.
+<p><a href="https://example.com/123.+">https://example.com/123.+</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+https://example.com/123.?
+.
+<p><a href="https://example.com/123">https://example.com/123</a>.?</p>
+````````````````````````````````
+
+```````````````````````````````` example
+https://example.com/123.-
+.
+<p><a href="https://example.com/123.-">https://example.com/123.-</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+https://example.com/123._
+.
+<p><a href="https://example.com/123">https://example.com/123</a>._</p>
+````````````````````````````````
+
+@hmhealey - We don't match GitHub's behaviour for the following cases
+
+```````````````````````````````` example
+https://example.com/123.(Pagetitle
+.
+<p><a href="https://example.com/123">https://example.com/123</a>.(Pagetitle</p>
+````````````````````````````````
+
+```````````````````````````````` example
+https://example.com/123.)Pagetitle
+.
+<p><a href="https://example.com/123">https://example.com/123</a>.)Pagetitle</p>
+````````````````````````````````
+
+```````````````````````````````` example
+https://example.com/123.(
+.
+<p><a href="https://example.com/123">https://example.com/123</a>.(</p>
+````````````````````````````````
+
+```````````````````````````````` example
+https://example.com/123.)
+.
+<p><a href="https://example.com/123">https://example.com/123</a>.)</p>
+````````````````````````````````
+
 ===========================================================================================================================================
 ## At Mentions
 ===========================================================================================================================================
