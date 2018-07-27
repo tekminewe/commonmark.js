@@ -1504,3 +1504,21 @@ email@汤.中国
 .
 <p><a href="mailto:email@%E6%B1%A4.%E4%B8%AD%E5%9B%BD">email@汤.中国</a></p>
 ````````````````````````````````
+
+```````````````````````````````` example
+![alt](src =16x20 "Test")
+.
+<p><img src="src" alt="alt" title="Test" width="16" height="20" /></p>
+````````````````````````````````
+
+```````````````````````````````` example
+![alt](src =x20 "Test")
+.
+<p><img src="src" alt="alt" title="Test" height="20" /></p>
+````````````````````````````````
+
+```````````````````````````````` example
+![alt](src =16x "Test")
+.
+<p><img src="src" alt="alt" title="Test" width="16" /></p>
+````````````````````````````````
