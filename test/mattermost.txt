@@ -1544,3 +1544,201 @@ email@汤.中国
 .
 <p><img src="src" alt="alt" title="Test" width="16" /></p>
 ````````````````````````````````
+
+===========================================================================================================================================
+## Hashtags
+===========================================================================================================================================
+
+### Valid hashtags
+
+```````````````````````````````` example
+#abcd #efgh
+.
+<p><span data-hashtag="abcd">#abcd</span> <span data-hashtag="efgh">#efgh</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+#abc123
+.
+<p><span data-hashtag="abc123">#abc123</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+#abc123
+.
+<p><span data-hashtag="abc123">#abc123</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+# abcd #efgh
+.
+<h1>abcd <span data-hashtag="efgh">#efgh</span></h1>
+````````````````````````````````
+
+```````````````````````````````` example
+#test-test
+.
+<p><span data-hashtag="test-test">#test-test</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+#test_test
+.
+<p><span data-hashtag="test_test">#test_test</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+#test.test
+.
+<p><span data-hashtag="test.test">#test.test</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+#test1/#test2
+.
+<p><span data-hashtag="test1">#test1</span>/<span data-hashtag="test2">#test2</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+(#test)
+.
+<p>(<span data-hashtag="test">#test</span>)</p>
+````````````````````````````````
+
+```````````````````````````````` example
+#test-
+.
+<p><span data-hashtag="test">#test</span>-</p>
+````````````````````````````````
+
+```````````````````````````````` example
+#test.
+.
+<p><span data-hashtag="test">#test</span>.</p>
+````````````````````````````````
+
+```````````````````````````````` example
+This is a sentence containing #test containing a hashtag
+.
+<p>This is a sentence containing <span data-hashtag="test">#test</span> containing a hashtag</p>
+````````````````````````````````
+
+### Not hashtags
+
+Hashtags must be at least 3 characters long by default
+
+```````````````````````````````` example
+#ab #ef
+.
+<p>#ab #ef</p>
+````````````````````````````````
+
+This is actually a heading
+
+```````````````````````````````` example
+# abcd # efgh
+.
+<h1>abcd # efgh</h1>
+````````````````````````````````
+
+Hashtags must start with a letter
+
+```````````````````````````````` example
+#123
+.
+<p>#123</p>
+````````````````````````````````
+
+```````````````````````````````` example
+#123test
+.
+<p>#123test</p>
+````````````````````````````````
+
+### Formatted hashtags
+
+```````````````````````````````` example
+*#test*
+.
+<p><em><span data-hashtag="test">#test</span></em></p>
+````````````````````````````````
+
+```````````````````````````````` example
+**#test**
+.
+<p><strong><span data-hashtag="test">#test</span></strong></p>
+````````````````````````````````
+
+```````````````````````````````` example
+_#test_
+.
+<p><em><span data-hashtag="test">#test</span></em></p>
+````````````````````````````````
+
+```````````````````````````````` example
+__#test__
+.
+<p><strong><span data-hashtag="test">#test</span></strong></p>
+````````````````````````````````
+
+```````````````````````````````` example
+~~#test~~
+.
+<p><del><span data-hashtag="test">#test</span></del></p>
+````````````````````````````````
+
+### Interactions between hashtags and other nodes
+
+```````````````````````````````` example
+`#test`
+.
+<p><code>#test</code></p>
+````````````````````````````````
+
+```````````````````````````````` example
+[this is a link #test](http://example.com)
+.
+<p><a href="http://example.com">this is a link #test</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+#@test
+.
+<p>#<span data-mention-name="test">@test</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+@#test
+.
+<p>@<span data-hashtag="test">#test</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+#~test
+.
+<p>#<span data-channel-name="test">~test</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+~#test
+.
+<p>~<span data-hashtag="test">#test</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+#:test:
+.
+<p>#<span data-emoji-name="test" data-literal=":test:">:test:</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
+:#test:
+.
+<p>:<span data-hashtag="test">#test</span>:</p>
+````````````````````````````````
+
+```````````````````````````````` example
+#test@example.com
+.
+<p><span data-hashtag="test">#test</span>@example.com</p>
+````````````````````````````````

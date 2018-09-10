@@ -803,7 +803,7 @@ headings:
 #hashtag
 .
 <p>#5 bolt</p>
-<p>#hashtag</p>
+<p><span data-hashtag="hashtag">#hashtag</span></p>
 ````````````````````````````````
 
 
