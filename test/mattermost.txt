@@ -1528,7 +1528,6 @@ email@汤.中国
 ````````````````````````````````
 
 ```````````````````````````````` example
->>>>>>> Stashed changes
 ![alt](src =16x20 "Test")
 .
 <p><img src="src" alt="alt" title="Test" width="16" height="20" /></p>
