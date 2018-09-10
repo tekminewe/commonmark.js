@@ -760,12 +760,10 @@ These words should_not_be_emphasized.
 
 ### gfm_hashtag
 
-@hmhealey - This will need to change once we support hashtags.
-
 ```````````````````````````````` example
 #header
 .
-<p>#header</p>
+<p><span data-hashtag="header">#header</span></p>
 ````````````````````````````````
 
 ```````````````````````````````` example
