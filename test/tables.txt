@@ -555,6 +555,33 @@ foo|aaa
 </code></pre>
 ````````````````````````````````
 
+```````````````````````````````` example
+ | A  | B  | C  |
+ |:---|:---|:---|
+ | 1  | Name | Toast |
+ | 2  | Name | Server |
+.
+<table>
+<thead>
+<tr>
+<th align="left">A</th>
+<th align="left">B</th>
+<th align="left">C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">1</td>
+<td align="left">Name</td>
+<td align="left">Toast</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">Name</td>
+<td align="left">Server</td>
+</tr></tbody></table>
+````````````````````````````````
+
 ### Tables with escaped pipes
 
 ```````````````````````````````` example
@@ -1002,7 +1029,7 @@ Here's a link to [Freedom Planet 2][].
 </tr></tbody></table>
 ````````````````````````````````
 
-### Sequential cells
+### Empty cells
 
 ```````````````````````````````` example
 | a | b | c |
