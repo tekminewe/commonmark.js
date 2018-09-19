@@ -94,3 +94,25 @@ Issue #116 - tabs before and after ATX closing heading
 .
 <h1>foo</h1>
 ````````````````````````````````
+
+commonmark/CommonMark#493 - escaped space not allowed in link
+destination.
+```````````````````````````````` example
+[link](a\ b)
+.
+<p>[link](a\ b)</p>
+````````````````````````````````
+
+Issue #527 - meta tags in inline contexts
+
+```````````````````````````````` example
+City:
+<span itemprop="contentLocation" itemscope itemtype="https://schema.org/City">
+  <meta itemprop="name" content="Springfield">
+</span>
+.
+<p>City:
+<span itemprop="contentLocation" itemscope itemtype="https://schema.org/City">
+<meta itemprop="name" content="Springfield">
+</span></p>
+````````````````````````````````
