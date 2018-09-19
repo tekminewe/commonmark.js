@@ -5853,6 +5853,8 @@ time specified with a hexadecimal numeral instead of decimal).
 
 Here are some nonentities:
 
+@hmhealey - There's an extra hashtag here in our version
+
 ```````````````````````````````` example
 &nbsp &x; &#; &#x;
 &#987654321;
@@ -5861,7 +5863,7 @@ Here are some nonentities:
 .
 <p>&amp;nbsp &amp;x; &amp;#; &amp;#x;
 &amp;#987654321;
-&amp;#abcdef0;
+&amp;<span data-hashtag="abcdef0">#abcdef0</span>;
 &amp;ThisIsNotDefined; &amp;hi?;</p>
 ````````````````````````````````
 
