@@ -9051,10 +9051,12 @@ Illegal tag names, not parsed as HTML:
 
 Illegal attribute names:
 
+@hmhealey - Hashtags change how this renders from the original spec
+
 ```````````````````````````````` example
 <a h*#ref="hi">
 .
-<p>&lt;a h*#ref=&quot;hi&quot;&gt;</p>
+<p>&lt;a h*<span data-hashtag="ref">#ref</span>=&quot;hi&quot;&gt;</p>
 ````````````````````````````````
 
 

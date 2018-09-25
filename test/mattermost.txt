@@ -1570,6 +1570,12 @@ email@汤.中国
 ````````````````````````````````
 
 ```````````````````````````````` example
+#ABC
+.
+<p><span data-hashtag="ABC">#ABC</span></p>
+````````````````````````````````
+
+```````````````````````````````` example
 # abcd #efgh
 .
 <h1>abcd <span data-hashtag="efgh">#efgh</span></h1>
