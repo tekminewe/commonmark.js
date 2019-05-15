@@ -19,6 +19,41 @@ https://example.com
 ````````````````````````````````
 
 ```````````````````````````````` example
+taco+what://example.com
+.
+<p><a href="taco+what://example.com">taco+what://example.com</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+taco.what://example.com
+.
+<p><a href="taco.what://example.com">taco.what://example.com</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+taco++what://example.com
+.
+<p>taco++<a href="what://example.com">what://example.com</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+taco..what://example.com
+.
+<p>taco..<a href="what://example.com">what://example.com</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+taco+what23://example.com
+.
+<p><a href="taco+what23://example.com">taco+what23://example.com</a></p>
+````````````````````````````````
+
+```````````````````````````````` example
+taco.what23://example.com
+.
+<p><a href="taco.what23://example.com">taco.what23://example.com</a></p>
+````````````````````````````````
+
 ftp://example.com
 .
 <p><a href="ftp://example.com">ftp://example.com</a></p>
