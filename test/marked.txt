@@ -2935,7 +2935,7 @@ readme.md
 ```````````````````````````````` example
 test.:test
 .
-<p>test.:test</p>
+<p><a href="test.:test">test.:test</a></p>
 ````````````````````````````````
 
 ```````````````````````````````` example
